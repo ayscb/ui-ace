@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_jqgrid.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:02 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - jqGird</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../common/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../common/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <!-- jqgrid-->
+    <link href="../common/css/plugins/jqgrid/ui.jqgridffe4.css?0820" rel="stylesheet">
+
+    <link href="../common/css/animate.min.css" rel="stylesheet">
+    <link href="../common/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>我的代码统计 详情</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_2"></table>
+                            <div id="pager_list_2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../common/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../common/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="../common/js/plugins/jqgrid/i18n/grid.locale-cnffe4.js?0820"></script>
+    <script src="../common/js/plugins/jqgrid/jquery.jqGrid.minffe4.js?0820"></script>
+    <script src="../common/js/content.min.js?v=1.0.0"></script>
+    <script>
+        $(document).ready(function(){$.jgrid.defaults.styleUI="Bootstrap";var mydata=[
+            {id:"1",project:"Nos2.0",subModule:"Fenix_fal",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"2",project:"Router",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"3",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"4",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"5",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"6",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"7",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"8",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"9",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"10",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"11",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"12",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"13",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"14",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+            {id:"15",project:"Nos2.0",subModule:"Fenix_fall",branch:"master",commitId:"123dsh23hh23hhasd",mrTime:"2016-01-02 12:23:12",statistic:"123"},
+
+          ];
+
+
+            $("#table_list_2").jqGrid(
+                    {
+                        data:mydata,
+                        datatype:"local",
+                        height:450,
+                        autowidth:true,
+                        shrinkToFit:true,
+                        rowNum:20,
+                        rowList:[10,20,30],
+                        colNames:["序号","项目","子仓","分支","commitID","commit时间","Mr时间","新增代码行数"],
+                        colModel:[
+                                {name:"id",        index:"id",        width:60, align:"center",sorttype:"int",search:true, hidden:true},
+                                {name:"project",   index:"project",   width:90, align:"center",sorttype:"date",formatter:"date"},
+                                {name:"subModule", index:"subModule", width:100,align:"center",sorttype:"string"},
+                                {name:"branch",    index:"branch",    width:80, align:"center",sorttype:"string",formatter:"number"},
+                                {name:"commitId",  index:"commitId",  width:80, align:"center",sorttype:"string"},
+                                {name:"commitTime",index:"commitTime",width:80, align:"right", formatter:"date", sortable:true,},
+                                {name:"mrTime",    index:"mrTime",    width:100,align:"right", sortable:true,formatter:"date"},
+                                {name:"statistic", index:"statistic", width:100,sortable:true,formatter:"number"}
+                                ],
+                        pager:"#pager_list_2",
+                        viewrecords:true,
+                        caption:"代码统计详情",
+                        add:false,
+                        edit:false,
+                        addtext:"Add",
+                        edittext:"Edit",
+                        hidegrid:false
+                    });
+
+            $("#table_list_2").setSelection(4,true);
+            $("#table_list_2").jqGrid("navGrid","#pager_list_2",{ edit:false,add:false,del:false,search:true},{height:200,reloadAfterSubmit:true});
+            $(window).bind("resize",function(){
+                var width=$(".jqGrid_wrapper").width();
+                $("#table_list_2").setGridWidth(width)})
+        });
+
+    </script>
+</body>
+
+</html>
